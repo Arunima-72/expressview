@@ -29,22 +29,22 @@
   </nav>
 
 
-    <form method="post" action="/basic/add">
+    <form method="post" action="/basic/edit/<%=id%>">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">StudentName</label>
-          <input type="text" class="form-control" name="name"  id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input type="text" class="form-control"  value=<%=data[id].name%> name="name"  id="exampleInputEmail1" aria-describedby="emailHelp">
           <div id="emailHelp" class="form-text"></div>
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Place</label>
-          <input type="text" class="form-control"  name="place" id="exampleInputPassword1">
+          <input type="text" class="form-control" value=<%=data[id].place%> name="place" id="exampleInputPassword1">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Age</label>
-            <input type="text" class="form-control"  name="age"  id="exampleInputPassword1">
+            <input type="text" class="form-control" value=<%=data[id].age%> name="age"  id="exampleInputPassword1">
           </div>
        
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Update</button>
       </form>
     
 </body>

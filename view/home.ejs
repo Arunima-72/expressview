@@ -13,6 +13,29 @@
     <%for(let i=0;i<data.length;i++){%>
        <P><%=data[i].name%></P>
     <%}%> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#">Student App</a>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <%for(let i=0;i<nav.length;i++){%>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href=<%=nav[i].link%>><%=nav[i].name%></a>
+            </li>
+            <%}%>
+            
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+
+
+
+
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <%for(let i=0;i<data.length;i++){%>
         <div class="col">
@@ -21,6 +44,8 @@
             <div class="card-body">
               <h5 class="card-title"><%=data[i].name%></h5>
               <p class="card-text"><%=data[i].place%></p>
+              <a class="btn btn-info" href="/basic/update/<%=i%>">Update</a>
+              <a class="btn btn-info" href="/basic/delete/<%=i%>">Delete</a>
             </div>
           </div>
         </div>
